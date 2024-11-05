@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #4a90e2; 
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 2px solid #4a90e2;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #4caf50; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049; 
+  }
+  
+  .tablero {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 0 auto; 
+    border: 2px solid #4a90e2; 
+    border-radius: 8px;
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .fila {
+    display: flex;
+  }
+  
+  .celda {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #e7e7e7; 
+    transition: background-color 0.3s, transform 0.2s; 
+  }
+  
+  .celda:hover {
+    background-color: #d5d5d5;
+    transform: scale(1.1); 
+  }
+  
+  .celda.descubierta {
+    background-color: #ffcc80;
+    border-color: #ff9800; 
+  }
+  
+  
+  .celda.mina.descubierta {
+    background-color: #ffebee; 
+    color: #b71c1c; 
+  }
+  

@@ -1,0 +1,22 @@
+<div>
+    <h1>Busca Minas</h1>
+    <label for="minas">Cantidad de Minas:</label>
+    <input type="number" [(ngModel)]="minas" min="1" />
+    <button (click)="iniciarJuego()">Iniciar Juego</button>
+    <p>{{ mensaje }}</p>
+  
+    <div *ngIf="tablero.length > 0">
+      <div class="tablero">
+        <div *ngFor="let fila of tablero; let i = index" class="fila">
+          <div *ngFor="let celda of fila; let j = index" 
+               class="celda" 
+               [ngClass]="{'mina': celda.mina, 'descubierta': celda.descubierta}" 
+               (click)="descubrirCelda(i, j)">
+            <span *ngIf="celda.descubierta">{{ celda.mina ? '💣' : celda.numero }}</span>
+            <span *ngIf="!celda.descubierta"></span> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
